@@ -31,7 +31,7 @@ app.use("/api/v1/message", messageRoute);
 app.use(express.static(path.join(__dirname, "/frontend/dist")));
 
 // If needed, only use this to handle fallback route for SPA (Single Page Application)
-app.get("/", (req, res) => {
+app.get("*", (req, res) => {
     res.sendFile(path.resolve(__dirname, "frontend", "dist", "index.html"));
 });
 
