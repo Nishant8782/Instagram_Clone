@@ -29,7 +29,7 @@ export default function ChatPage() {
   // Fetch all users
   const fetchUsers = async () => {
     try {
-      const res = await axios.get("https://instagram-clone-6.onrender.com:8000/api/v1/user/suggested", {
+      const res = await axios.get("https://instagram-clone-6.onrender.com/api/v1/user/suggested", {
         withCredentials: true,
       })
       if (res.data.success) {
