@@ -29,7 +29,7 @@ export default function ChatPage() {
   // Fetch all users
   const fetchUsers = async () => {
     try {
-      const res = await axios.get("http://localhost:8000/api/v1/user/suggested", {
+      const res = await axios.get("https://instagram-clone-6.onrender.com:8000/api/v1/user/suggested", {
         withCredentials: true,
       })
       if (res.data.success) {
@@ -49,7 +49,7 @@ console.log("activeuserrrrrr", activeUser);
 
     setLoading(true)
     try {
-      const res = await axios.get(`http://localhost:8000/api/v1/message/all/${activeUser._id}`, {
+      const res = await axios.get(`https://instagram-clone-6.onrender.com/api/v1/message/all/${activeUser._id}`, {
         withCredentials: true,
       })
 
@@ -73,7 +73,7 @@ const sendMessage = async () => {
 
   try {
     const res = await axios.post(
-      `http://localhost:8000/api/v1/message/send/${activeUser._id}`,
+      `https://instagram-clone-6.onrender.com/api/v1/message/send/${activeUser._id}`,
       { message: newMessage },
       { withCredentials: true },
     )

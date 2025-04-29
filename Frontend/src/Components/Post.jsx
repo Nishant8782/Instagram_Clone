@@ -51,7 +51,7 @@ export default function Post() {
   const fetchAllPosts = async () => {
     try {
       console.log("API call firing...");
-      const res = await axios.get("http://localhost:8000/api/v1/post/all", {
+      const res = await axios.get("https://instagram-clone-6.onrender.com/api/v1/post/all", {
         withCredentials: true
       });
       console.log("Response:", res);
@@ -72,7 +72,7 @@ export default function Post() {
   const commentHandler = async() => {
     try {
       console.log("commentId", commentsId);
-      const res = await axios.post(`http://localhost:8000/api/v1/post/${commentsId}/comment`,{text}, {
+      const res = await axios.post(`https://instagram-clone-6.onrender.com/api/v1/post/${commentsId}/comment`,{text}, {
         withCredentials: true
       });
       console.log(res);
@@ -95,7 +95,7 @@ export default function Post() {
       try {
         console.log("liked id", id);
 
-        const res = await axios.get(`http://localhost:8000/api/v1/post/${id}/like`, {
+        const res = await axios.get(`https://instagram-clone-6.onrender.com/api/v1/post/${id}/like`, {
           withCredentials: true
         });
         fetchAllPosts();
@@ -111,7 +111,7 @@ export default function Post() {
       try {
         console.log("liked id", id);
 
-        const res = await axios.get(`http://localhost:8000/api/v1/post/${id}/dislike`, {
+        const res = await axios.get(`https://instagram-clone-6.onrender.com/api/v1/post/${id}/dislike`, {
           withCredentials: true
         });
 
@@ -158,7 +158,7 @@ export default function Post() {
   const handleDelete = async (id) => {
     console.log(id);
     try {
-      const res = await axios.get(`http://localhost:8000/api/v1/post/delete/${id}`, {
+      const res = await axios.get(`https://instagram-clone-6.onrender.com/api/v1/post/delete/${id}`, {
         withCredentials:true
       })
       console.log(res)
@@ -177,7 +177,7 @@ export default function Post() {
 
   const handleBookmark = async (id) => {
     try {
-      const res = await axios.get(`http://localhost:8000/api/v1/post/${id}/bookmark`, {
+      const res = await axios.get(`https://instagram-clone-6.onrender.com/api/v1/post/${id}/bookmark`, {
         withCredentials:true
       })
 
@@ -194,7 +194,7 @@ export default function Post() {
   }
   const handleFollow = async (id) => {
     try {
-      const res = await axios.get(`http://localhost:8000/api/v1/user/followorunfollow/${id}`,{
+      const res = await axios.get(`https://instagram-clone-6.onrender.com/api/v1/user/followorunfollow/${id}`,{
         withCredentials:true
       })
 

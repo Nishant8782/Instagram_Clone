@@ -43,7 +43,7 @@ const CreatePost = ({ onClose }) => {
     const fetchAllPosts = async () => {
         try {
           console.log("API call firing...");
-          const res = await axios.get("http://localhost:8000/api/v1/post/all", {
+          const res = await axios.get("https://instagram-clone-6.onrender.com/api/v1/post/all", {
             withCredentials: true
           });
           console.log("Response:", res);
@@ -77,7 +77,7 @@ const CreatePost = ({ onClose }) => {
         }
 
         try {
-            const res = await axios.post('http://localhost:8000/api/v1/post/addpost', formData, {
+            const res = await axios.post('https://instagram-clone-6.onrender.com/api/v1/post/addpost', formData, {
                 withCredentials: true
             });
             if(res.data.success){

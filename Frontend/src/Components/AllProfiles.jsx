@@ -19,7 +19,7 @@ const Profile = ({ profileId, setShowProfile }) => {
   
   const fetchProfile = async () => {
     try {
-      const res = await axios.get(`http://localhost:8000/api/v1/user/${profileId}/profile`, {
+      const res = await axios.get(`https://instagram-clone-6.onrender.com/api/v1/user/${profileId}/profile`, {
         withCredentials: true
       });
 
@@ -37,7 +37,7 @@ const Profile = ({ profileId, setShowProfile }) => {
 
   const handleFollow = async (id) => {
     try {
-      const res = await axios.get(`http://localhost:8000/api/v1/user/followorunfollow/${id}`, {
+      const res = await axios.get(`https://instagram-clone-6.onrender.com/api/v1/user/followorunfollow/${id}`, {
         withCredentials: true
       });
 
