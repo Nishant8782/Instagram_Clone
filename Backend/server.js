@@ -3,8 +3,7 @@ import cors from 'cors';
 import dotenv from 'dotenv';
 import cookieParser from 'cookie-parser';
 import path from 'path';
-import { fileURLToPath } from 'url';
-import { dirname } from 'path';
+
 
 import connect from './utils/db.js';
 import userRoutes from './routes/user.route.js';
@@ -13,8 +12,8 @@ import messageRoute from './routes/message.route.js';
 import { app, server } from './socket/socket.js';
 
 // Setup __dirname manually
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
+const __dirname = path.resolve();
+console.log(__dirname);
 
 // Load env variables
 dotenv.config();
