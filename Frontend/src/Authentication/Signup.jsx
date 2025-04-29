@@ -27,14 +27,16 @@ export default function Signup() {
       })
       console.log(res);
       if(res.data.sucess === true) {
-        console.log("account Created");
+        
+      }
+      console.log("account Created");
         toast(`${res.data.message}`);
         setInput({
           username: '',
           email : '',
           password : ''
         })
-      }
+        navigate('/')
     } catch (error) {
       console.log(error);
       
@@ -46,11 +48,7 @@ export default function Signup() {
       ...input, [e.target.name] : e.target.value
     });
   }
-    useEffect(() => {
-      if(user){
-        navigate('/app')
-      }
-    }, [])
+
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-indigo-50 to-blue-50 flex items-center justify-center p-4">

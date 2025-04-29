@@ -52,11 +52,7 @@ export default function Login() {
     });
   };
 
-  // useEffect(() => {
-  //   if(user){
-  //     navigate('/app')
-  //   }
-  // }, [])
+
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-50 flex items-center justify-center p-4">
