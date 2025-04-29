@@ -13,7 +13,7 @@
     "@radix-ui/react-slot": "^1.2.0",
     "@reduxjs/toolkit": "^2.7.0",
     "axios": "^1.8.4",
-    "backend": "file:./backend",
+    "backend": "file:..",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "date-fns": "^4.1.0",
