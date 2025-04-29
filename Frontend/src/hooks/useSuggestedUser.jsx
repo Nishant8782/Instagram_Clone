@@ -5,7 +5,7 @@ import { setSuggestedUser } from "../Components/redux/suggestedUser"
 
 const useSuggestedUser = () => {
     const dispatch = useDispatch()
-    useEffect ( () => {
+    useEffect (() => {
         const fetchSuggestedUser = async () => {
             try {
                 const res = await axios.get("https://instagram-clone-6.onrender.com/api/v1/user/suggested", {
