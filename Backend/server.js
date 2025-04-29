@@ -34,13 +34,11 @@ app.use("/api/v1/user", userRoutes);
 app.use("/api/v1/post", postRoute);
 app.use("/api/v1/message", messageRoute);
 
-// Serve static files from frontend/dist
-app.use(express.static(path.join(__dirname, '../frontend/dist'))); // <--- fixed path
-
-// SPA fallback route
+app.use(express.static(path.join(__dirname, 'frontend', 'dist')));
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, '../frontend/dist/index.html'));
+  res.sendFile(path.resolve(__dirname, 'frontend', 'build', 'index.html'));
 });
+
 
 // Start server
 server.listen(PORT, () => {
